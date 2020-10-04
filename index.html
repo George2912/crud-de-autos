@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-body">
+                <form onsubmit="event.preventDefault(), submitCar()" action="/cars">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="brand">Marca</label>
+                            <input type="text" class="form-control" id="brand" placeholder="marca" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="model">Modelo</label>
+                            <input type="text" class="form-control" id="model" placeholder="modelo" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="color">Color</label>
+                            <input type="text" class="form-control" id="color" placeholder="color" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="year">Año</label>
+                            <select class="custom-select" id="year" required>
+                                <option selected disabled value="">Selecciona...</option>
+                                <option>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                                <option>2016</option>
+                                <option>2015</option>
+                                <option>2014</option>
+                                <option>2013</option>
+                                <option>2012</option>
+                                <option>2011</option>
+                                <option>2010</option>
+                                <option>2009</option>
+                                <option>2008</option>
+                                <option>2007</option>
+                                <option>2006</option>
+                                <option>2005</option>
+                                <option>2004</option>
+                                <option>2003</option>
+                                <option>2002</option>
+                                <option>2001</option>
+                                <option>2000</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="price">Precio</label>
+                            <input type="number" class="form-control" id="price" placeholder="$" required>
+                        </div>
+                    </div>
+                    <button id="submit-button" type="submit" class="btn btn-primary">Agregar</button>
+                </form>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Año</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody id="cars-table-body">
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="./cars.js"></script>
+</body>
+</html>
